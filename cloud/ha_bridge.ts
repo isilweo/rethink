@@ -24,6 +24,7 @@ import Dev_2REFT1DIC4P_U from './devices/2REFT1DIC4P_U'
 import Y_V8_Y___W_B32QEUK from './devices/Y_V8_Y___W.B32QEUK'
 import Y_VB_Y___W_B32QEUK from './devices/Y_VB_Y___W.B32QEUK'
 import F_V8_Y___W_B_2QEUK from './devices/F_V8_Y___W.B_2QEUK'
+import F_V__Y___W_B_2QEUK from './devices/F_V__Y___W.B_2QEUK'
 import Y_V8_F___W_B_2QEUK from './devices/Y_V8_F___W.B_2QEUK'
 import F_V__F___W_B_1QEUK from './devices/F_V__F___W.B_1QEUK'
 import F_C__Y___W_A__QEUK from './devices/F_C__Y___W.A__QEUK'
@@ -88,6 +89,7 @@ const t2deviceTypes: Record<string, T2Factory> = {
     N17, // LG LDNPQ445S dishwasher (BK7234 platform, reports the board id "N17")
     'Y_V8_Y___W.B32QEUK': Y_V8_Y___W_B32QEUK,
     'F_V8_Y___W.B_2QEUK': F_V8_Y___W_B_2QEUK,
+    'F_V__Y___W.B_2QEUK': F_V__Y___W_B_2QEUK, // F_V8's 39-byte record on some units (TW4V9RW9W), a 32-byte one on others
     'Y_V8_F___W.B_2QEUK': Y_V8_F___W_B_2QEUK,
     VCDWL2QEUK, // LG F4X7511TWS front-load washer (matched on modelId VCDWL2QEUK)
     'G2V7_Y___W.B_2QEUK': G2V7_Y___W_B_2QEUK, // LG F2NX50S9TKC slim front-load washer, VCDWL2QEUK's record in the 0x20 envelope
@@ -120,7 +122,6 @@ const t2deviceTypes: Record<string, T2Factory> = {
     'F_V7_Y___W.B_2QEUK': F_V8_Y___W_B_2QEUK, // NOTE: we reuse F_V8_Y___W_B_2QEUK as the models appear to be compatible
     'F_V7_Y___W.B__QEUK': F_V8_Y___W_B_2QEUK, // LG F2V5PS0W front-load washer - confirmed working, status/course/spin/temp/energy/remaining_time all decode correctly against a real unit
     'F_V7_Y___W.A__QEUK': F_C__Y___W_A__QEUK, // LG WV5-1275W
-    'F_V__Y___W.B_2QEUK': F_V8_Y___W_B_2QEUK, // NOTE: we reuse F_V8_Y___W_B_2QEUK as the models appear to be compatible
     'F_V__Y___W.B__QEUK': F_V8_Y___W_B_2QEUK, // LG WV9-1609B front-load washer (AU), status/course/temp/spin/times/cycles/locks checked against bridged LG cloud state and the panel
     'F_VA_F___W.B__QEUK': F_V__F___W_B_1QEUK, // FV1413H2BA front-load washer SoftAP model (deviceType 201)
     RC90V9_WW: RC90U2_WW, // LG RC91V9EV2Q heat pump dryer, same records
