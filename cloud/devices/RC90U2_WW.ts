@@ -95,6 +95,10 @@ export const COURSES = Enum.of({
     'Cool Air': 0x0d,
     'Warm Air': 0x0e,
     'Allergy Care': 0x10,
+    // RH90V9_WW: the knob position after Cotton, default Cupboard / Eco Hybrid "Eco" as for its modelJson COTTONPLUS
+    'Cotton+': 0x19,
+    // RH90V9_WW: the "Drum Care" panel button (modelJson TUB_CLEAN), no dry level / Time, 3:00
+    'Tub Clean': 0x13,
     // downloaded ("smart") courses
     'Baby Wear': 0x65,
     'Gym Clothes': 0x66,
